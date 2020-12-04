@@ -38,11 +38,22 @@
     <div class="explination">
         <h4>How does this work?</h4>
         <p>
-            I am creating an imaginary 2d grid using 2 for loops, incrimenting x from 0 to 1 and for each incrementaton for x,
+            I am creating an imaginary 2d grid using 2 for loops, incrimenting x from 0 to 1 and for each incrementaton of x,
             doing the same for y. Within these for loops, we are getting random numbers between
-            0 and 1 for both x and y. This essentially gives us a random X,Y coordinate. From here, we need to imagine a circle with a radius of 1.
-            Now we can take our x and y coordinates and use the distance coordinate to see if the point falls within radius of the circle.
-            <br><br>
+            0 and 1 for both x and y. This essentially gives us a random X,Y coordinate. From here, we need to imagine a circle with a radius of 1,
+            and work specifically within the quadrent 1 (We can multiply whatever results by 4 and it will apply to the whole)
+
+        </p>
+
+        <img src = https://study.com/cimages/multimages/16/quadrant8044038571910925463.jpg>
+
+        <p>
+
+            Now we can take our x and y coordinates and use the distance equation to see if the point falls within radius of the circle.(we can ignore one of the x and y since it starts at the origin)
+
+        </p>
+        <img src = https://th.bing.com/th/id/OIP.wWRrYAq-RzppFr6osgZ6EQHaDY?w=337&h=154&c=7&o=5&pid=1.7>
+        <p>
 
             Basically if the distance is less than 1 then it is inside of the circle. so... <br>
 
@@ -53,10 +64,10 @@
             At this point we have a random point generator aaaand we can see if the random point is within the imaginary circle.
             <br> But how do we tie this to pi?
             <br><br>
-            Well the area of a circle is defined by A = 4*pi*r^2. We have a constant of 4(refering to the 4 quadrents of the graph, of which we've made 1),
-            r which weve decided to be 1(and 1^2 is just 1), finally A can be defined by the ratio of area of the graph within the circle over the total area of the graph(1 by 1)
+            Well the area of a circle is defined by A = 4*pi*r^2. We have a constant of 4(refering to the 4 quadrents of the graph, of which we've made 1 with our code),
+            r which we've decided to be 1(and 1^2 is just 1), finally A can be defined by the ratio of area of the graph within the circle over the total area of the graph.
             . <br><br>
-            With a litte algebra we can manipulate the formula to be Pi = 4 * AreaRatio(A_inside_points/A_total_points)
+            With a litte algebra we can manipulate the formula to be Pi = 4 * AreaRatio   .........    the AreaRatio = (A_inside_points/A_total_points)
             <br><br>
             
             Boooooooom! Lastly we need to throw that into js format and maniputlate the dom to show the answer! ---- Btw pi is 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679
