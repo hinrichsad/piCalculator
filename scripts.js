@@ -1,32 +1,32 @@
-function randomNum() {
+var submit = $("#submit");
 
-    var myInput = document.querySelector("#pointNum").value;
+submit.on("click", function randomNum() {
 
-    insidePoint = 0;
-    totalPoint = 0;
+            var myInput = $("#pointNum").val();
+            var pi = 0;
 
-    for (var i = 0; i <= myInput; i++) {
-        for (var j = 0; j <= myInput; j++) {
+            insidePoint = 0;
+            totalPoint = 0;
 
-            var x = Math.random();
-            var y = Math.random();
+            for (var i = 0; i <= myInput; i++) {
+                for (var j = 0; j <= myInput; j++) {
 
-            var distance = Math.pow(x, 2) + Math.pow(y, 2);
-            if (distance < 1) {
-                insidePoint++;
+                    var x = Math.random();
+                    var y = Math.random();
+
+                    var distance = Math.pow(x, 2) + Math.pow(y, 2);
+                    if (distance < 1) {
+                        insidePoint++;
+                    }
+
+                    totalPoint++;
+                }
             }
+            
+            pi = 4 * insidePoint / totalPoint;
 
-            totalPoint++;
-        }
-    }
-    return 4 * insidePoint / totalPoint;
-}
+            var finalPi = $("#finalPi");
 
-var finalPi = document.querySelector("#finalPi");
-var submit = document.querySelector("#submit")
-
-var element = document.createElement("div");
-element.textContent = "Pi is estimated at ";
-finalPi.appendChild(element);
-
-submit.addEventListener("click", console.log("clicked"))
+            console.log(pi);
+            finalPi.text(pi);
+        });

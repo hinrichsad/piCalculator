@@ -1,8 +1,15 @@
-.card{
-    margin-top: 15%;
-    margin-left: 50%;
-    box-shadow: black 0px 0px 20px;
-}
+
 h4{
     text-align: center;
+}
+.calc{
+    border: solid black 1px;
+    border-radius: 20px;
+    padding: 0 20px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+.explination{
+    margin: 0 10%;
 }
